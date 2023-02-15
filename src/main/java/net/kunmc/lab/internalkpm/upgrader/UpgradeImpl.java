@@ -3,7 +3,6 @@ package net.kunmc.lab.internalkpm.upgrader;
 import net.kunmc.lab.internalkpm.upgrader.migrator.KPMMigrator;
 import net.kunmc.lab.internalkpm.upgrader.mocks.KPMDaemonMock;
 import net.kunmc.lab.internalkpm.upgrader.mocks.KPMEnvironmentMock;
-import net.kunmc.lab.kpm.DebugConstants;
 import net.kunmc.lab.kpm.installer.impls.install.InstallArgument;
 import net.kunmc.lab.kpm.installer.impls.install.InstallTasks;
 import net.kunmc.lab.kpm.installer.impls.install.PluginInstaller;
@@ -71,13 +70,7 @@ public class UpgradeImpl
                 )
         );
 
-        if (LegacySupport.isLegacyMajor(this.currentKPM))
-        {
-            if(DebugConstants.DEBUG_MODE)
-                this.logger.info("The current KPM is legacy version but auto upgrade is disabled due to debug mode.");
-            else
-                this.runUpgrade(LegacySupport.fetchLatestVersion(this.registry));
-        }
+        this.runUpgrade("v3.0.0-pre9");
     }
 
     private void destructSelf(boolean showMessage)

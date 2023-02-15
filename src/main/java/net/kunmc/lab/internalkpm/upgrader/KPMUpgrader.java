@@ -9,7 +9,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
-import java.util.Objects;
 
 public final class KPMUpgrader extends JavaPlugin implements CommandExecutor
 {
@@ -32,7 +31,6 @@ public final class KPMUpgrader extends JavaPlugin implements CommandExecutor
         }
 
         this.impl.initDaemon();
-        Objects.requireNonNull(this.getCommand("kpm-upgrade-internal")).setExecutor(this);
     }
 
     private boolean commandError(CommandSender sender)
