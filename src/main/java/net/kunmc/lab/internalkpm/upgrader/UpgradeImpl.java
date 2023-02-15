@@ -80,15 +80,11 @@ public class UpgradeImpl
 
         if (this.currentKPM == null)
         {
-            this.logger.info("KPMUpgrader をサーバーから手動で削除してください。");
+            this.logger.info("KPMReviewPackage をサーバーから手動で削除してください。");
             return;
         }
 
-        String destructCommand;
-        if (LegacySupport.isLegacyMajor(this.currentKPM))
-            destructCommand = "kpm rm " + this.plugin.getName();
-        else
-            destructCommand = "kpm upgrade-kpm destruct";
+        String destructCommand = "kpm rm " + this.currentKPM.getName();
 
         this.plugin.getServer().dispatchCommand(
                 this.plugin.getServer().getConsoleSender(),
