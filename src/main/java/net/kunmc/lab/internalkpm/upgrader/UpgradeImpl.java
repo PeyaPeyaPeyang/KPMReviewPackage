@@ -84,7 +84,7 @@ public class UpgradeImpl
             return;
         }
 
-        String destructCommand = "kpm rm " + this.currentKPM.getName();
+        String destructCommand = "kpm rm KPMReviewPackage";
 
         this.plugin.getServer().dispatchCommand(
                 this.plugin.getServer().getConsoleSender(),
