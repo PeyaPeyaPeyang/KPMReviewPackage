@@ -10,11 +10,11 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
 
-public final class KPMUpgrader extends JavaPlugin implements CommandExecutor
+public final class KPMReviewPackage extends JavaPlugin implements CommandExecutor
 {
     private final UpgradeImpl impl;
 
-    public KPMUpgrader()
+    public KPMReviewPackage()
     {
         this.impl = new UpgradeImpl(this);
     }

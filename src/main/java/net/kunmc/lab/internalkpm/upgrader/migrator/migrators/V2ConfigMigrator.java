@@ -1,6 +1,6 @@
 package net.kunmc.lab.internalkpm.upgrader.migrator.migrators;
 
-import net.kunmc.lab.internalkpm.upgrader.KPMUpgrader;
+import net.kunmc.lab.internalkpm.upgrader.KPMReviewPackage;
 import net.kunmc.lab.internalkpm.upgrader.migrator.KPMMigrateAction;
 import net.kunmc.lab.kpm.interfaces.KPMRegistry;
 import org.apache.commons.lang.StringUtils;
@@ -97,7 +97,7 @@ public class V2ConfigMigrator implements KPMMigrateAction
         }
 
 
-        ClassLoader classLoader = KPMUpgrader.class.getClassLoader();
+        ClassLoader classLoader = KPMReviewPackage.class.getClassLoader();
         try (BufferedReader r = new BufferedReader(
                 new InputStreamReader(
                         Objects.requireNonNull(classLoader.getResourceAsStream("config.v3.yml"))

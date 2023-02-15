@@ -30,14 +30,14 @@ public class UpgradeImpl
     private static final String KPM_OWNER = "TeamKUN";
     private static final String KPM_NAME = "TeamKunPluginManager";
 
-    private final KPMUpgrader plugin;
+    private final KPMReviewPackage plugin;
     private final Logger logger;
     private Plugin currentKPM;
     private final Version currentKPMVersion;
 
     private KPMRegistry registry;
 
-    public UpgradeImpl(KPMUpgrader plugin)
+    public UpgradeImpl(KPMReviewPackage plugin)
     {
         this.plugin = plugin;
         this.logger = plugin.getLogger();
