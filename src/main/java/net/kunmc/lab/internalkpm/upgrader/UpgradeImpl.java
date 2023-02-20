@@ -23,6 +23,7 @@ import org.bukkit.plugin.Plugin;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.attribute.FileAttribute;
 import java.util.logging.Logger;
 
 public class UpgradeImpl
@@ -211,7 +212,9 @@ public class UpgradeImpl
 
         try
         {
-            Files.createDirectory(this.currentKPM.getDataFolder().toPath().resolve(".caches"));
+            Path caches = this.currentKPM.getDataFolder().toPath().resolve(".caches");
+            if (!Files.exists(caches))
+                Files.createDirectories(caches);
         }
         catch (IOException e)
         {
