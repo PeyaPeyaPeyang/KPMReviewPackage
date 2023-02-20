@@ -70,7 +70,7 @@ public class UpgradeImpl
                 )
         );
 
-        this.runUpgrade("v3.0.0-pre9");
+        this.runUpgrade("v3.0.0-pre10");
     }
 
     private void destructSelf(boolean showMessage)
