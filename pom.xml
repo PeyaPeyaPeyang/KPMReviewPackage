@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>net.kunmc.lab.kpm</groupId>
+    <groupId>org.kunlab.kpm</groupId>
     <artifactId>KPMReviewPackage</artifactId>
     <version>1.1.2</version>
     <packaging>jar</packaging>
@@ -14,7 +14,7 @@
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <kpm.version>3.0.0-pre9</kpm.version>
+        <kpm.version>3.0.0-pre10</kpm.version>
     </properties>
 
     <build>
@@ -43,11 +43,11 @@
                             <relocations>
                                 <relocation>
                                     <pattern>com.zaxxer.hikari</pattern>
-                                    <shadedPattern>net.kunmc.lab.kpm.hikari</shadedPattern>
+                                    <shadedPattern>org.kunlab.kpm.hikari</shadedPattern>
                                 </relocation>
                                 <relocation>
-                                    <pattern>net.kunmc.lab.kpm</pattern>
-                                    <shadedPattern>net.kunmc.lab.kpm.kpmupgrader.daemon</shadedPattern>
+                                    <pattern>org.kunlab.kpm</pattern>
+                                    <shadedPattern>org.kunlab.kpm.kpmupgrader.daemon</shadedPattern>
                                 </relocation>
                             </relocations>
                             <artifactSet>
@@ -63,27 +63,27 @@
                             </transformers>
                             <filters>
                                 <filter>
-                                    <artifact>net.kunmc.lab.kpm:KPMTasks</artifact>
+                                    <artifact>org.kunlab.kpm:KPMTasks</artifact>
                                     <excludes>
-                                        <exclude>net/kunmc/lab/kpm/task/tasks/garbage/**</exclude>
-                                        <exclude>net/kunmc/lab/kpm/task/tasks/lookup/**</exclude>
-                                        <exclude>net/kunmc/lab/kpm/task/tasks/alias/**</exclude>
+                                        <exclude>org/kunlab/kpm/task/tasks/garbage/**</exclude>
+                                        <exclude>org/kunlab/kpm/task/tasks/lookup/**</exclude>
+                                        <exclude>org/kunlab/kpm/task/tasks/alias/**</exclude>
                                     </excludes>
                                 </filter>
                                 <filter>
-                                    <artifact>net.kunmc.lab.kpm:KPMPluginInstaller</artifact>
+                                    <artifact>org.kunlab.kpm:KPMPluginInstaller</artifact>
                                     <excludes>
-                                        <exclude>net/kunmc/lab/kpm/installer/impls/autoremove/**</exclude>
-                                        <exclude>net/kunmc/lab/kpm/installer/impls/clean/**</exclude>
-                                        <exclude>net/kunmc/lab/kpm/installer/impls/register/**</exclude>
-                                        <exclude>net/kunmc/lab/kpm/installer/impls/update/**</exclude>
-                                        <exclude>net/kunmc/lab/kpm/installer/impls/upgrade/**</exclude>
+                                        <exclude>org/kunlab/kpm/installer/impls/autoremove/**</exclude>
+                                        <exclude>org/kunlab/kpm/installer/impls/clean/**</exclude>
+                                        <exclude>org/kunlab/kpm/installer/impls/register/**</exclude>
+                                        <exclude>org/kunlab/kpm/installer/impls/update/**</exclude>
+                                        <exclude>org/kunlab/kpm/installer/impls/upgrade/**</exclude>
                                     </excludes>
                                 </filter>
                                 <filter>
-                                    <artifact>net.kunmc.lab.kpm:KPMCommon</artifact>
+                                    <artifact>org.kunlab.kpm:KPMCommon</artifact>
                                     <excludes>
-                                        <exclude>net/kunmc/lab/kpm/db/**</exclude>
+                                        <exclude>org/kunlab/kpm/db/**</exclude>
                                     </excludes>
                                 </filter>
                             </filters>
@@ -129,31 +129,31 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>net.kunmc.lab.kpm</groupId>
+            <groupId>org.kunlab.kpm</groupId>
             <artifactId>KPMCommon</artifactId>
             <version>${kpm.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>net.kunmc.lab.kpm</groupId>
+            <groupId>org.kunlab.kpm</groupId>
             <artifactId>KPMModels</artifactId>
             <version>${kpm.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>net.kunmc.lab.kpm</groupId>
+            <groupId>org.kunlab.kpm</groupId>
             <artifactId>KPMResolver</artifactId>
             <version>${kpm.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>net.kunmc.lab.kpm</groupId>
+            <groupId>org.kunlab.kpm</groupId>
             <artifactId>KPMPluginInstaller</artifactId>
             <version>${kpm.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>net.kunmc.lab.kpm</groupId>
+            <groupId>org.kunlab.kpm</groupId>
             <artifactId>KPMTasks</artifactId>
             <version>${kpm.version}</version>
             <scope>compile</scope>

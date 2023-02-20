@@ -1,11 +1,11 @@
 package net.kunmc.lab.internalkpm.upgrader.mocks;
 
 import lombok.AllArgsConstructor;
-import net.kunmc.lab.kpm.interfaces.KPMRegistry;
-import net.kunmc.lab.kpm.interfaces.hook.HookExecutor;
-import net.kunmc.lab.kpm.interfaces.hook.HookRecipientList;
-import net.kunmc.lab.kpm.interfaces.hook.KPMHook;
-import net.kunmc.lab.kpm.interfaces.hook.KPMHookRecipient;
+import org.kunlab.kpm.interfaces.KPMRegistry;
+import org.kunlab.kpm.interfaces.hook.HookExecutor;
+import org.kunlab.kpm.interfaces.hook.HookRecipientList;
+import org.kunlab.kpm.interfaces.hook.KPMHook;
+import org.kunlab.kpm.interfaces.hook.KPMHookRecipient;
 
 @AllArgsConstructor
 public class HookExecutorMock implements HookExecutor

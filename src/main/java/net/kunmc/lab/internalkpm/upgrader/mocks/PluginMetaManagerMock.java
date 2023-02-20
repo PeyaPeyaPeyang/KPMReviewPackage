@@ -1,8 +1,8 @@
 package net.kunmc.lab.internalkpm.upgrader.mocks;
 
-import net.kunmc.lab.kpm.enums.metadata.InstallOperator;
-import net.kunmc.lab.kpm.interfaces.meta.PluginMetaManager;
-import net.kunmc.lab.kpm.interfaces.meta.PluginMetaProvider;
+import org.kunlab.kpm.enums.metadata.InstallOperator;
+import org.kunlab.kpm.interfaces.meta.PluginMetaManager;
+import org.kunlab.kpm.interfaces.meta.PluginMetaProvider;
 import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -49,6 +49,12 @@ public class PluginMetaManagerMock implements PluginMetaManager
     public boolean hasPluginMeta(@NotNull Plugin plugin)
     {
         return false;
+    }
+
+    @Override
+    public void crawlAll()
+    {
+        
     }
 
     @Override

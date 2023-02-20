@@ -1,11 +1,11 @@
 package net.kunmc.lab.internalkpm.upgrader.mocks;
 
-import net.kunmc.lab.kpm.db.Transaction;
-import net.kunmc.lab.kpm.enums.metadata.InstallOperator;
-import net.kunmc.lab.kpm.interfaces.meta.PluginMetaIterator;
-import net.kunmc.lab.kpm.interfaces.meta.PluginMetaProvider;
-import net.kunmc.lab.kpm.meta.DependencyNode;
-import net.kunmc.lab.kpm.meta.PluginMeta;
+import org.kunlab.kpm.db.Transaction;
+import org.kunlab.kpm.enums.metadata.InstallOperator;
+import org.kunlab.kpm.interfaces.meta.PluginMetaIterator;
+import org.kunlab.kpm.interfaces.meta.PluginMetaProvider;
+import org.kunlab.kpm.meta.DependencyNode;
+import org.kunlab.kpm.meta.PluginMeta;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginLoadOrder;
 import org.jetbrains.annotations.NotNull;

@@ -1,7 +1,7 @@
 package net.kunmc.lab.internalkpm.upgrader.migrator.migrators;
 
 import net.kunmc.lab.internalkpm.upgrader.migrator.KPMMigrateAction;
-import net.kunmc.lab.kpm.interfaces.KPMRegistry;
+import org.kunlab.kpm.interfaces.KPMRegistry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.jetbrains.annotations.NotNull;
